@@ -1,0 +1,8 @@
+{
+  "name": "Halloween Coloring Pages",
+  "description": "Free printable Halloween coloring pages for kids and adults. High-quality outlines of pumpkins, ghosts, witches, cute monsters, and festive autumn themes.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

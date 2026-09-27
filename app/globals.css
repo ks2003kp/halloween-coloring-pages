@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --halloween-bg-dark: #0f0a1c;
+    --halloween-surface-dark: #1b122f;
+    --halloween-surface-card: #24183e;
+    --halloween-orange: #ea580c;
+    --halloween-orange-light: #f97316;
+    --halloween-amber: #f59e0b;
+    --halloween-purple-deep: #160c2b;
+    --halloween-purple-mid: #3b1d64;
+    --halloween-cream: #faf7f2;
+    --halloween-cream-muted: #e7dfd3;
+    --halloween-text-main: #181126;
+    --halloween-text-muted: #5e5272;
+    --halloween-green: #10b981;
+  }
+
+  body {
+    background-color: #0d0818;
+    color: #f5f0ea;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Accessible focus rings */
+  :focus-visible {
+    outline: 2px solid #f97316;
+    outline-offset: 2px;
+  }
+}
+
+/* Tasteful Halloween Animations with reduced-motion support */
+@keyframes floatGentle {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(1.5deg);
+  }
+}
+
+@keyframes floatGhost {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px);
+  }
+  50% {
+    transform: translateY(-10px) translateX(4px);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(0.9);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+}
+
+.animate-float {
+  animation: floatGentle 5s ease-in-out infinite;
+}
+
+.animate-ghost {
+  animation: floatGhost 6s ease-in-out infinite;
+}
+
+.animate-glow {
+  animation: pulseGlow 4s ease-in-out infinite;
+}
+
+.animate-twinkle {
+  animation: twinkle 3s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-float,
+  .animate-ghost,
+  .animate-glow,
+  .animate-twinkle {
+    animation: none !important;
+  }
+}
